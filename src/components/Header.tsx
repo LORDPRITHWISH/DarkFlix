@@ -1,16 +1,17 @@
 // import React from "react";
-import { NavLink, useNavigate, useLocation } from "react-router";
+// import { NavLink, useNavigate, useLocation } from "react-router";
+import { NavLink } from "react-router";
 import { useUserStore } from "../store/userStore";
 import { useSidebarState } from "@/store/sideStore";
-import { Menu, Search, Upload } from "lucide-react";
+import { Menu } from "lucide-react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar"
 
 const Header = () => {
   // const userId = useUserStore((s) => s.userId);
   const profilePhoto = useUserStore((s) => s.profilePhoto);
   const { toggle } = useSidebarState();
-  const navigate = useNavigate();
-  const location = useLocation();
+  // const navigate = useNavigate();
+  // const location = useLocation();
 
   return (
     <div className=" flex p-1 bg-slate-950/30 top-0 sticky z-50 items-center justify-between backdrop-blur-xl">
@@ -34,7 +35,7 @@ const Header = () => {
           <span className="font-bold flex text-2xl">DarkVids</span>
         </NavLink>
       </div>
-      <div className="flex flex-col justify-between items-center text-center w-full max-w-xl mx-auto">
+      {/* <div className="flex flex-col justify-between items-center text-center w-full max-w-xl mx-auto">
         <div className="relative w-full max-w-md">
           <input
             type="text"
@@ -46,16 +47,16 @@ const Header = () => {
             size={18}
           />
         </div>
-      </div>
+      </div> */}
       <div className="flex items-center gap-4">
-        {location.pathname !== "/upload" && (
+        {/* {location.pathname !== "/upload" && (
           <button
             className="text-white p-2 rounded-xl bg-slate-800 hover:bg-slate-600 transition duration-200 flex items-center "
             onClick={() => navigate("/upload")}>
             <Upload className="mr-2" />
             upload
           </button>
-        )}
+        )} */}
         <NavLink
           to="/chanel"
           className="mr-4">

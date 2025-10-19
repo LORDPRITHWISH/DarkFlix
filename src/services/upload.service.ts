@@ -28,7 +28,7 @@ export const uploadChunk = (signedUrl: string, chunk: Blob) => {
   return axios(signedUrl, {
     method: "PUT",
     data: chunk,
-  });setVideoDatasetVideoData
+  });
 };
 
 export const completeUpload = (

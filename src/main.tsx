@@ -37,8 +37,8 @@ const router = createBrowserRouter(
         <Route path=":userid" element={<Chanel />} />
       </Route>
       <Route path="video/" element={<Outlet />}>
-        <Route index element={<Navigate to="/" replace />} />
-        <Route path=":videoid" element={<Video />} />
+        {/* <Route index element={<Navigate to="/" replace />} /> */}
+        <Route index element={<Video />} />
       </Route>
       <Route path="edit/" element={<Outlet />}>
         <Route index element={<Navigate to="/studio" replace />} />

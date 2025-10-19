@@ -86,22 +86,6 @@ export default function DetailsZone() {
     [videoid]
   );
 
-  const setDetail = useMemo(
-    () =>
-      debounce((field: string, value: string | string[]) => {
-        if (!videoid) return;
-        setLoading(true);
-        setVideoData(videoid, { [field]: value }).finally(() =>
-          setLoading(false)
-        );
-      }, 500),
-    [videoid]
-  );
-
-  // const handleRemoveTag = (tag: string) => {
-  //   setTags(tags.filter((t) => t !== tag));
-  // };
-
   const publishVideo = () => {
     if (!videoid) return;
     setLoading(true);

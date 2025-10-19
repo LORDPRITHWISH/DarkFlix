@@ -18,7 +18,7 @@ import { setVideoData } from "@/services/upload.service";
 
 export default function DetailsZone() {
   const { videoid } = useParams<{ videoid: string }>();
-  // const [videoDetails, setVideoDetails] = useState<any>(null);
+  const [videoDetails, _] = useState<any>(null);
   const [thumbnailFile, setThumbnailFile] = useState<File | null>(null);
 
   // const [selectedPlaylist, setSelectedPlaylist] = useState(playlists[0]);
