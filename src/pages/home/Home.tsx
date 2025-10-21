@@ -47,7 +47,7 @@ export default function HomePage() {
             {items.map((item) => (
               <div
                 key={item.relativePath}
-                className="flex flex-col"
+                className="flex flex-col cursor-pointer hover:scale-[1.02] transition-transform"
                 onClick={() =>
                   navigate(
                     item.type === "file"
@@ -70,25 +70,13 @@ export default function HomePage() {
                       </div> */}
                 </div>
                 <div className="mt-2 flex  gap-2  ">
-                  {/* <Avatar className="size-11 mt-1">
-                    <AvatarImage
-                      src={video.ownerDetails.profilepic || "/profile.jpg"}
-                      alt="channel"
-                    />
-                    <AvatarFallback>
-                      {video.ownerDetails.username.charAt(0).toUpperCase()}
-                    </AvatarFallback>
-                  </Avatar> */}
                   <div className="mt-2 ">
-                    <p className="font-semibold text-sm leading-tight line-clamp-2">
+                    {/* <p className="font-semibold text-sm leading-tight break-words whitespace-pre-wrap">
+                      {item.name ?? "Untitled Video"}
+                    </p> */}
+                    <p className="font-semibold  leading-tight line-clamp-2 break-all">
                       {item.name ?? "Untitled Video"}
                     </p>
-                    {/* <p className="text-xs text-gray-400">
-                      {item.ownerDetails.username}
-                    </p>
-                    <p className="text-xs text-gray-500">
-                      {item.views} views • {moment(item.createdAt).fromNow()}
-                    </p> */}
                   </div>
                 </div>
               </div>
